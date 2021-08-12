@@ -6,5 +6,7 @@ public class HelloWorld {
 		System.out.println("Hello World2");
 		System.out.println("3");
 		System.out.println("Hello World3");
+		System.out.println("4");
+		System.out.println("Hello World4");
 	}
 }
