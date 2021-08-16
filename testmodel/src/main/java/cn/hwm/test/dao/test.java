@@ -20,7 +20,13 @@ public class test {
                 return input.getName();
             }
         });
+        //Java8写法
         //取List中单一数据存放在新的List当中
         List<String> list = userList.stream().map(User::getName).collect(Collectors.toList());
+
+        //Java8forEach写法
+        list.forEach(data -> {
+
+        });
     }
 }
