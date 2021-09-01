@@ -4,9 +4,7 @@ import com.google.common.base.Function;
 import com.google.common.collect.Collections2;
 
 import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class test {
@@ -24,9 +22,16 @@ public class test {
         //取List中单一数据存放在新的List当中
         List<String> list = userList.stream().map(User::getName).collect(Collectors.toList());
 
+        //返回格式多包一层
+        Map<String,List<User>> maplist = new HashMap<>();
+        maplist.put("list",userList);
+
         //Java8forEach写法
         list.forEach(data -> {
 
         });
+
+        //分割list为String。格式：a,b,c,d,e
+        Joiner.on(",").join(list);
     }
 }
